@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星空体育 · 信息说明页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fafcfd;
+      color: #1a2b3c;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1.5rem 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 主视觉 */
+    .hero {
+      margin-top: 1.2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #0e1f2e;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .hero .sub {
+      font-size: 1rem;
+      color: #5d6f7e;
+      border-bottom: 1px solid #d9e2ec;
+      display: inline-block;
+      padding-bottom: 0.35rem;
+    }
+
+    /* 信息卡片通用 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin: 2.8rem 0 2.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 4px 14px rgba(0, 20, 30, 0.04), 0 1px 3px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(10, 40, 60, 0.06);
+    }
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #132a3b;
+      border-left: 4px solid #89b6d9;
+      padding-left: 0.8rem;
+    }
+    .card p, .card li {
+      font-size: 0.98rem;
+      color: #1f374b;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.4rem;
+    }
+    .card li {
+      padding: 0.25rem 0 0.25rem 1.2rem;
+      position: relative;
+    }
+    .card li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #7aa5c7;
+      font-weight: bold;
+    }
+
+    /* 适合人群卡片 双列小标签 */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.7rem;
+      margin-top: 0.5rem;
+    }
+    .tag {
+      background: #e9f0f6;
+      color: #1d374c;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* 自然链接段落 区域 */
+    .link-section {
+      margin: 2.5rem 0 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #dce6ef;
+      border-bottom: 1px solid #dce6ef;
+    }
+    .link-section p {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .link-section a {
+      color: #1a5b7d;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b7cddf;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .link-section a:hover {
+      color: #0a3044;
+      border-bottom-color: #0a3044;
+    }
+
+    /* 常见问题摘要 (faq) */
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      color: #132f42;
+    }
+    .faq-item p {
+      font-size: 0.92rem;
+      color: #405a6b;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #7a8f9e;
+      text-align: center;
+      border-top: 1px solid #e2eaf2;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body { padding: 1.2rem 1rem 3rem; }
+      .hero h1 { font-size: 2rem; }
+      .card { padding: 1.2rem 1.2rem; }
+      .card h2 { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 主视觉 -->
+  <div class="hero">
+    <h1>星空体育</h1>
+    <div class="sub">关注稳定入口 · 内容说明页面</div>
+  </div>
+
+  <!-- 用途卡片 + 介绍卡片 (信息卡片式) -->
+  <div class="card-grid">
+
+    <div class="card">
+      <h2>页面用途</h2>
+      <p>这是一个定位清晰的说明页，用于介绍「星空体育」的基本信息、适用场景以及使用前需要注意的要点。页面不代替主站功能，而是作为辅助理解的入口说明，帮助初次接触的人快速建立整体印象。</p>
+    </div>
+
+    <div class="card">
+      <h2>主要特点</h2>
+      <ul>
+        <li>呈现统一的视觉卡片结构，信息分层明确</li>
+        <li>内容侧重使用场景与人群匹配，不做过度承诺</li>
+        <li>保留自然链接段落，指向服务主站</li>
+        <li>所有描述均基于稳定、克制的表达方式</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>适合人群</h2>
+      <div class="tags">
+        <span class="tag">希望了解背景的用户</span>
+        <span class="tag">寻找说明页的访问者</span>
+        <span class="tag">关注服务稳定性的朋友</span>
+        <span class="tag">内容研究者</span>
+        <span class="tag">初次接触者</span>
+      </div>
+      <p style="margin-top: 0.8rem;">无论你是想确认服务定位，还是仅仅阅读介绍，这里都提供了简洁的参考信息。</p>
+    </div>
+  </div>
+
+  <!-- 自然链接段落 (包含唯一 a 标签，可见文本 = 星空体育) -->
+  <div class="link-section">
+    <p>如果你想进一步了解服务本身，可以前往 <a href="https://official-xingkongsports.com">星空体育</a> 查阅更多内容。本站为独立说明页，与主站配合使用体验更完整。</p>
+    <p>本页主要从入口稳定性与信息清晰度两个角度进行整理，部分概述仅作参考，详细功能与条款请以主站公示为准。</p>
+  </div>
+
+  <!-- FAQ 摘要（差异化章节） -->
+  <div style="margin: 1.8rem 0 0.8rem;">
+    <h2 style="font-weight: 500; font-size: 1.2rem; margin-bottom: 0.1rem;">常见问题摘要</h2>
+    <p style="font-size: 0.85rem; color: #5b7486; margin-bottom: 1.2rem;">基于常见关注点整理</p>
+    
+    <div class="faq-item">
+      <h3>这个页面和主站是什么关系？</h3>
+      <p>本页是独立的介绍说明页，不代替任何功能界面。它提供概括性信息，主站为实际服务平台。</p>
+    </div>
+    <div class="faq-item">
+      <h3>内容是否实时更新？</h3>
+      <p>说明性文字基于当前理解编写，不保证与主站每项调整同步，建议以主站最新信息为准。</p>
+    </div>
+    <div class="faq-item">
+      <h3>如何找到主站入口？</h3>
+      <p>页面中已包含指向 <a href="https://official-xingkongsports.com" style="color: #1a5b7d; text-decoration: underline; text-underline-offset: 3px;">星空体育</a> 的文字链接，你可以直接点击。</p>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    信息卡片说明页 · 内容真实克制<br>
+    仅做介绍用途，不构成任何承诺
+  </div>
+
+</div>
+</body>
+</html>
